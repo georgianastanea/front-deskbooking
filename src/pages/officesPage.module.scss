@@ -1,0 +1,50 @@
+$white: #fff;
+$dark-shadow: #c15959;
+$dark-blue: #1f305e;
+
+
+
+
+.wrapperContent {
+    
+    background-color: $white;
+    width: 100%;
+    height: 100%;
+    
+  }
+
+  .container {
+    grid-template-rows: 50px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: auto;
+  }
+
+  .office {
+    position: relative;
+    overflow: auto;
+    cursor: pointer;
+    font-size: 8x;
+    color: $dark-blue;
+    background-color: $white;
+    padding-left: 1em;
+    padding-top: 0.8em;
+    border-radius: 75px 75px;
+    display: inline-flex;
+    width:100px;
+    height:100px;
+    margin: 1.5em;
+    box-shadow: 3px 3px 10px 2px grey;
+    text-align: center;
+  
+    &:hover {
+      box-shadow: 3px 3px 10px 2px $dark-shadow;
+    }
+  }

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
 import getUsers from '../services/Users/getUsers'
-import User from '../components/User';
+import User from '../components/user/User';
 
 function AddUserPage() {
 
