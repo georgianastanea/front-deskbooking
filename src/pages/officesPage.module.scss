@@ -1,17 +1,16 @@
 $white: #fff;
-$dark-shadow: #c15959;
+$dark-shadow:#894958;
 $dark-blue: #1f305e;
-
-
 
 
 .wrapperContent {
     
     background-color: $white;
+    padding-top: 10px;
     width: 100%;
     height: 100%;
     display: flex;
-    
+    flex-direction: row;
     
   }
 
@@ -52,25 +51,25 @@ $dark-blue: #1f305e;
   }
 
 button{
-  width: 90%;
-  height: 50px;
-  color: $dark-blue;
-  background-color: $dark-shadow;
-  margin-top: 1%;
-  margin-left: 20px;
-  margin-bottom: 15px;
-  text-align: center;
+
   font-size: 70%;
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s;
-  border-style: double;
+  
 }
-.react-calendar {
+
+.reactCalendar {
   width: 350px;
   max-width: 100%;
   background: white;
   border: 1px solid #a0a096;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.125em;
+}
+
+.bottomDiv{
+  padding-top:30px; 
+  display:flex;
+  justify-content:center;
 }

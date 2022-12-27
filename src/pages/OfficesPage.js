@@ -34,23 +34,28 @@ function OfficesPage() {
   }, []);
 
   return (
+    
     <div className={styles.wrapperContent}>
 
-      <div style={{ width: "100%", height: "100px" , justifyContent:'center', display:'flex'}}>
-        <div>
+      
+        <div style={{marginLeft:'80px',marginRight:'80px'}}>
             
-            <div style={{width:'300px', height:'100px'}}>
+            <div>
                 <h2>Choose a day</h2>
                 <Calendar 
+                className={styles.reactCalendar}
                 onChange={onChange} 
                 value={value} />
             </div>
-            
+
+           <span>
+            <button style={{width:'110px', height:'40px',textAlign:'center',borderStyle:'double',marginTop:'20px',marginLeft:'107px', backgroundColor:'#F7eff6'}}>Book Desk</button>
+           </span>
             
         </div>
         
-      </div>
 
+    
       <div className={styles.container}>
         {offices.map((office) => (
           <div key={office.id}>
@@ -60,7 +65,12 @@ function OfficesPage() {
           </div>
         ))}
       </div>
+
+      
     </div>
+
+   
+   
   );
 }
 
