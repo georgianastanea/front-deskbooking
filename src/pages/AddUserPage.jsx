@@ -1,13 +1,31 @@
-import React from 'react'
-// import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom'
+import getUsers from '../services/Users/getUsers'
+import User from '../components/User';
 
 function AddUserPage() {
 
-    // const [users, setPipelines] = useState([]);
+    const [users, setUsers] = useState([]);
+
+    const getResult = async () => {
+        const result = await getUsers();
+        setUsers(result);
+    };
+
+    useEffect(() => {
+        getResult();
+    }, []);
 
     return (
-        <div>these are the users</div>
+        <div>users here
+            {users.map(user => (
+            <div key={user.id}>
+                <User
+                user={user}
+                />
+                </div>
+        ))}</div>
     )
 }
 
-export default AddUserPage
+export default AddUserPage;
