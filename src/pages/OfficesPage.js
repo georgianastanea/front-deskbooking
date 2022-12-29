@@ -54,8 +54,10 @@ function OfficesPage() {
 
 
   const handleBookDeskButtonOnClick = async () => {
-    // console.log("the selected office is " + selectedOffice);
     await Promise.all([creteBooking(1, selectedOffice, newDate)]);
+    alert('Thank you for your booking!');
+    window.location = '/';
+   
   };
 
   return (

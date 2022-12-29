@@ -1,0 +1,21 @@
+.header1{
+  font-family: "Helvetica Neue";
+  font-size: 50px;
+  font-style: italic;
+  font-variant: normal;
+  font-weight: 700;
+  position: absolute;
+  top: 200px;
+  left: 780px;
+}
+
+.header2{
+  font-family: "Helvetica Neue";
+  font-size: 40px;
+  font-style: italic;
+  font-variant: normal;
+  font-weight: 600;
+  position: absolute;
+  top: 250px;
+  left: 880px;
+}
