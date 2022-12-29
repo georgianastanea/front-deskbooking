@@ -1,8 +1,8 @@
 import { API } from '../../utility/api';
 
-const getOfficeById = async userId => {
+const getOfficesByDate = async date => {
     try {
-        const response = await API.get(`/users/${userId}`);
+        const response = await API.get(`/offices/${date}`);
         console.log(response.data);
         return response.data;
     } catch (e) {
@@ -10,4 +10,4 @@ const getOfficeById = async userId => {
     }
 };
 
-export default getOfficeById;
+export default getOfficesByDate;

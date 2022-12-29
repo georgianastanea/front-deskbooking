@@ -6,7 +6,6 @@ const creteBooking = async (
     date
 ) => {
     try {
-        console.log(userId, officeId, date);
         const response = await API.post('/bookings', {
             userId,
             officeId,

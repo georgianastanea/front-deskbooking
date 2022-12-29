@@ -6,7 +6,7 @@ const updateOffice = async (
     isAvailable
 ) => {
     try {
-        const response = await API.put(`/users/${userId}`, {
+        const response = await API.put(`/offices/${id}`, {
             number,
             isAvailable
         });

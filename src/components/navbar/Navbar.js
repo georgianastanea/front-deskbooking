@@ -26,7 +26,7 @@ export function NavBar() {
           </span>
         </a>
 
-        <a href="/offices" class="nav-link">
+        <a href="/calendar" class="nav-link">
           <span class="nav-link-span">
             <span class="u-nav">Offices</span>
           </span>

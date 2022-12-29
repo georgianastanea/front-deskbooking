@@ -23,8 +23,8 @@ $dark-blue: #1f305e;
     flex-wrap: wrap;
     align-content: flex-start;
     list-style: none;
-    margin: 10px;
-    margin-top: 60px;
+    margin-left: 80px;
+    margin-top:50px;
     height: auto;
   }
 
@@ -44,11 +44,31 @@ $dark-blue: #1f305e;
     margin: 1.5em;
     box-shadow: 3px 3px 10px 2px grey;
     text-align: center;
+    
   
-    &:hover {
+    &:hover, &:active {
       box-shadow: 3px 3px 10px 2px $dark-shadow;
     }
   }
+
+.selectedOffice{
+  position: relative;
+  overflow: auto;
+  cursor: pointer;
+  font-size: 8x;
+  color: $dark-blue;
+  background-color: $white;
+  padding-left: 1em;
+  padding-top: 0.8em;
+  border-radius: 75px 75px;
+  display: inline-flex;
+  width:80px;
+  height:80px;
+  margin: 1.5em;
+  box-shadow: 3px 3px 10px 2px grey;
+  text-align: center;
+  box-shadow: 3px 3px 10px 2px $dark-shadow;
+}
 
 button{
 
@@ -72,4 +92,20 @@ button{
   padding-top:30px; 
   display:flex;
   justify-content:center;
+}
+
+.summary{
+  background-color: $white;
+  margin-top: 50px;
+  margin-left:55px;
+  margin-bottom: 30px;
+  height: 250px;
+  width: 200px;
+  box-shadow: 3px 3px 10px 2px $dark-shadow;
+  text-align: center;
+
+}
+
+h3{
+  padding-top: 20px;
 }
