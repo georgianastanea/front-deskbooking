@@ -9,6 +9,7 @@ import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import creteBooking from "../services/Bookings/createBooking";
 import { useParams } from "react-router-dom";
+import axios from 'axios';
 
 function Disabled({ disabled, children }) {
   if (disabled) {
@@ -26,7 +27,9 @@ function OfficesPage() {
   const [offices, setOffices] = useState([]);
   const [officesByDate, setOfficesByDate] = useState([]);
   const [selectedOffice, setSelectedOffice] = useState(null);
-  const [isActive, setIsActive] = useState(false);
+  const [officeNumber, setOfficeNumber] = useState('');
+  const [activeUserId, setActiveUserId] = useState(null);
+
 
   let params = useParams();
  var newDate = JSON.stringify(params);
@@ -36,7 +39,12 @@ function OfficesPage() {
  " " + initialDate.substring(9,11) + " " + initialDate.substring(11);
 
 
-
+  const handlePreviewOffice =  () => {
+    if(selectedOffice != null)
+      {
+        officeNumber = 200 + selectedOffice;
+      }
+  }
 
   const onCLickSelectOffice = (id) => {
     setSelectedOffice(id);
@@ -52,11 +60,24 @@ function OfficesPage() {
   }, []);
 
 
+  const getId = async () =>
+{
+  const res = await axios.get('/users/active', {
+  responseType: 'text',
+  transformResponse: [v => v]
+});
+
+  let myJson = JSON.parse(res.data);
+  setActiveUserId(myJson[0].id);
+}
+
+getId();
 
   const handleBookDeskButtonOnClick = async () => {
-    await Promise.all([creteBooking(1, selectedOffice, newDate)]);
+    await Promise.all([creteBooking(activeUserId, selectedOffice, newDate)]);
     alert('Thank you for your booking!');
-    window.location = '/';
+    window.location.replace('http://localhost:8080/logout');
+    // window.location = '/';
    
   };
 

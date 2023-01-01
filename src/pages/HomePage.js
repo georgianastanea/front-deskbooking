@@ -11,8 +11,8 @@ function HomePage() {
     const navigate = useNavigate();
 
     const handleLogInButton =  () => {
-        // window.location.replace('http://localhost:8080/login');
-        navigate("/login");
+        window.location.replace('http://localhost:8080/login');
+        // navigate("/login");
       };
 
     const handleRegisterButton = () => {

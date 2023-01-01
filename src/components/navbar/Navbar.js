@@ -20,7 +20,7 @@ export function NavBar() {
           </span>
         </a>
         
-        <a href="/login" class="nav-link">
+        <a href="http://localhost:8080/login" class="nav-link">
           <span class="nav-link-span">
             <span class="u-nav">Log In</span>
           </span>
