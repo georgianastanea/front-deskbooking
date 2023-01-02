@@ -70,10 +70,10 @@ function OfficesPage() {
   let myJson = JSON.parse(res.data);
   setActiveUserId(myJson[0].id);
 }
-  
+  getId();
 
   const handleBookDeskButtonOnClick = async () => {
-    getId();
+   
     await Promise.all([creteBooking(activeUserId, selectedOffice, newDate)]);
     alert('Thank you for your booking!');
     window.location.replace('http://localhost:8080/logout');
