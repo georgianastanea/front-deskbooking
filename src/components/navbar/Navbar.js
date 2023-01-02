@@ -1,6 +1,9 @@
 import styles from "./navbar.scss";
+import React, { useEffect, useState } from "react";
+import axios from 'axios';
 
 export function NavBar() {
+
   return (
     <nav id="nav">
       <div class="nav left">
@@ -26,9 +29,9 @@ export function NavBar() {
           </span>
         </a>
 
-        <a href="/calendar" class="nav-link">
+        <a href="http://localhost:8080/logout" class="nav-link">
           <span class="nav-link-span">
-            <span class="u-nav">Offices</span>
+            <span class="u-nav">Log Out</span>
           </span>
         </a>
         
