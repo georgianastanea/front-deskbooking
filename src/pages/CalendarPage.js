@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 import { useNavigate } from "react-router-dom";
 
-function OfficesPage() {
+function CalendarPage() {
   const [date, setDate] = useState(new Date());
   const navigate = useNavigate();
 
@@ -21,6 +21,10 @@ function OfficesPage() {
     navigate("/offices/" + anotherOne);
   };
 
+  const handleSeeBookings = () => {
+
+  }
+
   return (
     <div style={{ display: "flex" }}>
       <div style={{ margin: "auto" }}>
@@ -33,12 +37,25 @@ function OfficesPage() {
             onClick={handleCheckOffices(date)}
             
           />
-          {/* {console.log(date.toDateString())} */}
         
         </div>
       </div>
+      <button
+          onClick={handleSeeBookings}
+          style={{
+            width: "110px",
+            height: "40px",
+            textAlign: "center",
+            borderStyle: "double",
+            marginTop: "320px",
+            marginRight: "200px",
+            backgroundColor: "#F7eff6",
+          }}
+        >
+          My Bookings
+        </button>
     </div>
   );
 }
 
-export default OfficesPage;
+export default CalendarPage;
