@@ -8,7 +8,6 @@ function Office(props) {
     const [isActive, setIsActive] = useState(false);
 
     const handleClick = () => {
-        // 👇️ toggle
         setIsActive(current => !current);}
 
 

@@ -71,7 +71,7 @@ function OfficesPage() {
   setActiveUserId(myJson[0].id);
 }
   getId();
-
+  console.log("active user " + activeUserId);
   const handleBookDeskButtonOnClick = async () => {
    
     await Promise.all([creteBooking(activeUserId, selectedOffice, newDate)]);
