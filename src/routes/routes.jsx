@@ -7,6 +7,7 @@ import CalendarPage from '../pages/CalendarPage'
 import LoginPage from '../pages/LoginPage'
 import RegisterPage from '../pages/RegisterPage'
 import UserBookingsPage from '../pages/UserBookingsPage'
+import HistoryPage from '../pages/HistoryPage'
 
 
 const Routes = () => {
@@ -18,7 +19,7 @@ const Routes = () => {
             <Route path="/offices/:date" element={<OfficesPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/registration" element={<RegisterPage />} />
-            <Route path="/bookings/user/:userId" element={<UserBookingsPage />} />
+            <Route path="/bookings/user/:userId" element={<HistoryPage />} />
         </ReactRoutes>
     )
 }

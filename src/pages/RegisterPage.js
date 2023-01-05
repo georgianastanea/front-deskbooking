@@ -26,6 +26,8 @@ const RegisterForm = () => {
     password: enteredPassword
       };
 
+   
+
     setErrorMessage("");
     axios
       .post("http://localhost:8080/registration", user)
@@ -79,9 +81,11 @@ const RegisterForm = () => {
             type="email"
             id="email"
             ref={emailInputRef}
-            placeholder="Insert here..."
+            placeholder="Use your company email"
             required
+            pattern="^(.+)@bestit.com" 
           />
+          
         </div>
           <label htmlFor="password">Password</label>
           <input
