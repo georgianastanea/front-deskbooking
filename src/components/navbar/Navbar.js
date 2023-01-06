@@ -3,6 +3,22 @@ import React, { useEffect, useState } from "react";
 import axios from 'axios';
 
 export function NavBar() {
+  const [activeUserId, setActiveUserId] = useState(null);
+
+  const getId = async () =>
+  {
+    const res = await axios.get('/users/active', {
+    responseType: 'text',
+    transformResponse: [v => v]
+  });
+  
+    let myJson = JSON.parse(res.data);
+    setActiveUserId(myJson[0].id);
+  }
+    getId();
+    console.log("active user " + activeUserId);
+
+    let bookingUrl = "http://localhost:3000/bookings/user/" + activeUserId;
 
   return (
     <nav id="nav">
@@ -29,9 +45,15 @@ export function NavBar() {
           </span>
         </a>
 
-        <a href="http://localhost:8080/logout" class="nav-link">
+        <a href="http://localhost:8080/logout" class="nav-link active">
           <span class="nav-link-span">
             <span class="u-nav">Log Out</span>
+          </span>
+        </a>
+
+        <a href={bookingUrl} class="nav-link ">
+          <span class="nav-link-span">
+            <span class="u-nav">My bookings</span>
           </span>
         </a>
         

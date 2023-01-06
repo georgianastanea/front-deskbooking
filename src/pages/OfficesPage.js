@@ -46,6 +46,8 @@ function OfficesPage() {
       }
   }
 
+  
+
   const onCLickSelectOffice = (id) => {
     setSelectedOffice(id);
   };
@@ -73,7 +75,7 @@ function OfficesPage() {
   getId();
   console.log("active user " + activeUserId);
   const handleBookDeskButtonOnClick = async () => {
-   
+    
     await Promise.all([creteBooking(activeUserId, selectedOffice, newDate)]);
     alert('Thank you for your booking!');
     window.location.replace('http://localhost:8080/logout');
@@ -134,7 +136,6 @@ function OfficesPage() {
         </button>
       </div>
       </div>
-      
     </div>
   );
 }

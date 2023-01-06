@@ -3,12 +3,13 @@ import styles from "./officesPage.module.scss";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import { Link } from "react-router-dom";
-
+import axios from 'axios';
 import { useNavigate } from "react-router-dom";
 
 function CalendarPage() {
   const [date, setDate] = useState(new Date());
   const navigate = useNavigate();
+  const [activeUserId, setActiveUserId] = useState(null);
 
   const onDateChange = (newDate) => {
     setDate(newDate);
@@ -25,6 +26,8 @@ function CalendarPage() {
 
   }
 
+
+
   return (
     <div style={{ display: "flex" }}>
       <div style={{ margin: "auto" }}>
@@ -40,7 +43,7 @@ function CalendarPage() {
         
         </div>
       </div>
-      <button
+      {/* <button
           onClick={handleSeeBookings}
           style={{
             width: "110px",
@@ -53,7 +56,7 @@ function CalendarPage() {
           }}
         >
           My Bookings
-        </button>
+        </button> */}
     </div>
   );
 }
