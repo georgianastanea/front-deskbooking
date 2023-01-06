@@ -1,8 +1,15 @@
-import React from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
 import { json } from 'react-router-dom';
+import { React, useEffect, useState, Component } from "react";
+import './table.css';
 
 function DisplayData(data){
-    const DisplayData = data.map(
+
+    useEffect(() => {
+        console.log(data);
+      }, [data]);
+    
+    const DisplayData = data.data.map(
         (info) => {
             return(
                 <tr>
@@ -18,8 +25,8 @@ function DisplayData(data){
              <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>Office Number</th>
-                        <th>Date</th>
+                        <th scope="col">Office Number</th>
+                        <th scope="col">Date</th>
                     </tr>
                 </thead>
 

@@ -1,14 +1,9 @@
 import styles from "./navbar.scss";
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
-import { UnLoggedNavBar } from "./UnLoggedNavbar";
-import { LoggedNavBar } from "./LoggedNavbar";
 
-export function NavBar() {
+export function LoggedNavBar() {
   const [activeUserId, setActiveUserId] = useState(null);
-  const [isLoggedIn, setLoggedIn] = useState(false);
-
-
 
   const getId = async () =>
   {
@@ -21,7 +16,6 @@ export function NavBar() {
     setActiveUserId(myJson[0].id);
   }
     getId();
-    console.log("active user " + activeUserId);
 
     let bookingUrl = "http://localhost:3000/bookings/user/" + activeUserId;
 
@@ -44,11 +38,6 @@ export function NavBar() {
           </span>
         </a>
         
-        <a href="http://localhost:8080/login" class="nav-link">
-          <span class="nav-link-span">
-            <span class="u-nav">Log In</span>
-          </span>
-        </a>
 
         <a href="http://localhost:8080/logout" class="nav-link active">
           <span class="nav-link-span">
@@ -64,9 +53,5 @@ export function NavBar() {
         
       </div>
     </nav>
-
-    // <div>
-
-    // </div>
   );
 }

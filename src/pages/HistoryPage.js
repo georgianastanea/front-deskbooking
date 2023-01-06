@@ -17,11 +17,16 @@ function HistoryPage() {
   }, []);
 
 
-console.log(bookings);
+
 
   return (
     <div>
-     {/* <DisplayData data={Array.of(bookings)}/> */}
+      <p>
+        <h2 style={{marginLeft:'200px',marginTop:'50px',marginBottom:'40px'}}>Booking history</h2>
+      </p>
+        <div style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
+            <DisplayData data={bookings}/>
+         </div>
     </div>
   );
 }
