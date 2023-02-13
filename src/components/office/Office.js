@@ -16,12 +16,9 @@ function Office(props) {
             className={props.className}
         >
             <div style={{ width: '90%' }} onClick={handleClick}>
-                <p>
+                <p style ={{marginTop:'15px', marginRight:'5px'}}>
                     {props.office.number}
                     
-                </p>
-                <p>
-                   {String(props.office.available)}
                 </p>
             </div>
         </div>
